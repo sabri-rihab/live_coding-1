@@ -5,33 +5,36 @@
     font-family: 'Barlow Semi', Condensed;
 }
 .container {
-    border: 1px solid red;
     background-color: gray;
-    width: 1400px;
+    width: auto;
     height: auto;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
 }
+div{border-radius: 15px;}
 .right{
-    border: 1px solid green;
-    height: 700px;
-    width: 30%;
+    height: 820px;
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    background: white;
+    padding: 40px;
 }
 .left{
-    border: 1px solid blue;
-    height: 700px;
-    width: 68%;
+    height: auto;
+    width: 1000px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 10px;
 }
 .long {
-    border: 1px solid pink;
-    height: 340px;
-    width: 67%;
+    height: 400px;
+    width: 650px;
+    min-width: 300px;
     margin: 5px;
     padding: 35px 20px;
     color: white;
@@ -41,9 +44,8 @@
     gap: 20px;
 }
 .short{
-    border: 1px solid purple;
-    height: 340px;
-    width: 30%;
+    height: 400px;
+    width: 300px;
     margin: 5px;
     padding: 35px 20px;
     color: white;
@@ -53,8 +55,8 @@
     gap: 20px;   
 }
 .profile{
-    border: 1px solid green;
     width: 250px;
+    height: auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -64,7 +66,6 @@
     flex-wrap: wrap;
     width: 150px;
     height: auto;
-    border: 1px solid yellow;
     margin-left: 15px;
 }
 .profile p{color: white;}
@@ -74,5 +75,9 @@
     width: 30px;
     height: 30px;
 }
-.big_text{font-size: 28px;}
-/* .short .big_text{font-size: 20px;} */
+.big_text{font-size: clamp(12px, 28px, 32px);}
+
+@media (max-width : 900px){
+    .long, .short{width: 100%; margin: 5%;}
+    .long{height: 600px;}
+}
